@@ -11,11 +11,10 @@
 
 
 / { 
-         
-	sensors {
-		compatible = "zmk,keymap-sensors";
-		sensors = <&encoder_1>;
-	};
+//	sensors {
+//		compatible = "zmk,keymap-sensors";
+//		sensors = <&encoder_1>;
+//	};
 	
 	keymap {
 	        label="Default";
