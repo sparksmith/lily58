@@ -65,9 +65,9 @@
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
 			
 // ------------------------------------------------------------------------------------------------------------
-// | USB   |EP_ON|EP_OF|      |      |      |                   |      |       |       |      |       |       |
-// | BT    | HOME|  ^  | END  |      | CUT  |                   |      |       | HOME  |  ^   | END   |       |
-// |       |  <  |  v  |  >   | UNDO | COPY |                   |      |       |   <   |  v   |   >   |       |
+// | USB   |EP_ON|EP_OF|      |      |      |                   |      |       |       |      | BTP CL| BTP 0 |
+// | BT    | HOME|  ^  | END  |      | CUT  |                   |      |       | HOME  |  ^   | END   | BTP 1 |
+// |       |  <  |  v  |  >   | UNDO | COPY |                   |      |       |   <   |  v   |   >   | BTP 3 |
 // |       |     |     |      | ALL  | PASTE|        |  |       |  =   |       |   +   |  [   |   ]   |   \   |
 //                     |      |      |      |        |  |       |      |       |       |
 			bindings = <
