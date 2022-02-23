@@ -44,8 +44,8 @@
 // ------------------------------------------------------------------------------------------------------------
 // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
 // |       | HOME|  ^  | END  |      | CUT  |                   |      |       | HOME  |   ^  | END   |       |
-// |       |  <  |  v  |   >  |      | COPY |                   |      |       |   <   |   v  |   >   |   ~   |
-// |       |EP_ON|EP_OF|EP_TOG| ALL  | PASTE|        |  |       |      |       |  +    |  {   |   }   |  "|"  |
+// |       |  <  |  v  |   >  | UNDO | COPY |                   |      |       |   <   |   v  |   >   |   ~   |
+// |       |     |     |      | ALL  | PASTE|        |  |       |      |       |  +    |  {   |   }   |  "|"  |
 //                     |      |      |      |        |  |       |      |       |       |
 // &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG 
 // &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4 
@@ -53,8 +53,8 @@
 			bindings = <				      
 &kp F1  &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &kp F8    &kp F9      &kp F10   &kp F11   &kp F12
 &trans  &kp HOME         &kp UP            &kp END           &trans       &kp LC(X)                    &trans    &trans    &kp HOME    &kp UP    &kp END   &trans
-&trans  &kp LEFT         &kp DOWN          &kp RIGHT         &trans       &kp LC(C)                    &trans    &trans    &kp LEFT    &kp DOWN  &kp RIGHT &kp TILDE
-&trans  &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG &kp LC(A)    &kp LC(V) &trans   &trans    &trans    &trans    &kp KP_PLUS &kp LBRC  &kp RBRC  &kp PIPE
+&trans  &kp LEFT         &kp DOWN          &kp RIGHT         &kp LC(Z)    &kp LC(C)                    &trans    &trans    &kp LEFT    &kp DOWN  &kp RIGHT &kp TILDE
+&trans  &trans           &trans            &trans            &kp LC(A)    &kp LC(V) &trans   &trans    &trans    &trans    &kp KP_PLUS &kp LBRC  &kp RBRC  &kp PIPE
                                            &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans			      
 			>;
 		};
@@ -64,17 +64,17 @@
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
 			
 // ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |       | HOME|  ^  | END  |      | CUT  |                   |      |       | HOME  |  ^   | END   |       |
-// |       |  <  |  v  |  >   |      | COPY |                   |      |       |   <   |  v   |   >   |       |
-// |       |     |     |      |      | PASTE|        |  |       |  =   |       |   +   |  [   |   ]   |   \   |
+// | USB   |EP_ON|EP_OF|      |      |      |                   |      |       |       |      |       |       |
+// | BT    | HOME|  ^  | END  |      | CUT  |                   |      |       | HOME  |  ^   | END   |       |
+// |       |  <  |  v  |  >   | UNDO | COPY |                   |      |       |   <   |  v   |   >   |       |
+// |       |     |     |      | ALL  | PASTE|        |  |       |  =   |       |   +   |  [   |   ]   |   \   |
 //                     |      |      |      |        |  |       |      |       |       |
 			bindings = <
-&trans    &trans   &trans   &trans     &trans  &trans                            &trans      &trans    &trans      &trans   &trans    &trans
-&trans    &kp HOME &kp UP   &kp END    &trans  &kp LC(X)                         &trans      &trans    &trans      &kp UP   &trans    &trans
-&trans    &kp LEFT &kp DOWN &kp RIGHT  &trans  &kp LC(C)                         &trans      &trans    &kp LEFT    &kp DOWN &kp RIGHT &trans
-&trans    &trans   &trans   &trans     &trans  &kp LC(V)   &trans    &trans      &kp EQUAL   &trans    &kp KP_PLUS &kp LBKT &kp RBKT  &kp BSLH
-                                       &trans  &trans      &trans    &trans      &trans      &trans    &trans      &trans
+&out OUT_USB    &ext_power EP_ON   &ext_power EP_OFF   &trans     &trans      &trans                            &trans      &trans    &trans      &trans   &trans    &trans
+&out OUT_BLE    &kp HOME           &kp UP              &kp END    &trans      &kp LC(X)                         &trans      &trans    &trans      &kp UP   &trans    &trans
+&trans          &kp LEFT           &kp DOWN            &kp RIGHT  &kp LC(Z)   &kp LC(C)                         &trans      &trans    &kp LEFT    &kp DOWN &kp RIGHT &trans
+&trans          &trans             &trans              &trans     &kp LC(A)   &kp LC(V)   &trans    &trans      &kp EQUAL   &trans    &kp KP_PLUS &kp LBKT &kp RBKT  &kp BSLH
+                                                       &trans     &trans      &trans      &trans    &trans      &trans      &trans    &trans
 			>;
 		};
 	};
