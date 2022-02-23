@@ -71,10 +71,10 @@
 // |       |     |     |      | ALL  | PASTE|        |  |       |  =   |       |   +   |  [   |   ]   |   \   |
 //                     |      |      |      |        |  |       |      |       |       |
 			bindings = <
-&out OUT_USB    &ext_power EP_ON   &ext_power EP_OFF   &trans     &trans      &trans                            &trans      &trans    &trans      &trans   &trans    &trans
-&out OUT_BLE    &kp HOME           &kp UP              &kp END    &trans      &kp LC(X)                         &trans      &trans    &trans      &kp UP   &trans    &trans
-&trans          &kp LEFT           &kp DOWN            &kp RIGHT  &kp LC(Z)   &kp LC(C)                         &trans      &trans    &kp LEFT    &kp DOWN &kp RIGHT &trans
-&trans          &trans             &trans              &trans     &kp LC(A)   &kp LC(V)   &trans    &trans      &kp EQUAL   &trans    &kp KP_PLUS &kp LBKT &kp RBKT  &kp BSLH
+&out OUT_USB    &ext_power EP_ON   &ext_power EP_OFF   &trans     &trans      &trans                            &trans      &trans    &trans      &trans   &bt BT_CLR &bt BT_SEL 0
+&out OUT_BLE    &kp HOME           &kp UP              &kp END    &trans      &kp LC(X)                         &trans      &trans    &trans      &kp UP   &trans     &bt BT_SEL 1 
+&trans          &kp LEFT           &kp DOWN            &kp RIGHT  &kp LC(Z)   &kp LC(C)                         &trans      &trans    &kp LEFT    &kp DOWN &kp RIGHT  &bt BT_SEL 3
+&trans          &trans             &trans              &trans     &kp LC(A)   &kp LC(V)   &trans    &trans      &kp EQUAL   &trans    &kp KP_PLUS &kp LBKT &kp RBKT   &kp BSLH
                                                        &trans     &trans      &trans      &trans    &trans      &trans      &trans    &trans
 			>;
 		};
